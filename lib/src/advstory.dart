@@ -212,7 +212,7 @@ class _AdvStoryState extends State<AdvStory> with TickerProviderStateMixin {
       valueListenable: _controller.positionNotifier.shouldShowView,
       builder: (context, bool value, child) {
         if (!value) return const SizedBox();
-
+    
         return DataProvider(
           hasTrays: false,
           controller: _controller,

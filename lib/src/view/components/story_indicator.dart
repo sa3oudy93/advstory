@@ -94,16 +94,19 @@ class StoryIndicator extends StatelessWidget {
     _generateIndicators();
 
     return SafeArea(
-        child: Align(
-      alignment: Alignment.topCenter,
-      child: Padding(
-        padding: style.padding,
-        child: SizedBox(
-          width: double.maxFinite,
-          height: style.height,
-          child: Row(children: _indicators),
-        ),
-      ),
-    ));
+        child: Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: Align(
+              alignment: Alignment.topCenter,
+              child: Padding(
+          padding: style.padding,
+          child: SizedBox(
+            width: double.maxFinite,
+            height: style.height,
+            child: Row(children: _indicators),
+          ),
+              ),
+            ),
+        ));
   }
 }

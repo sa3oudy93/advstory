@@ -75,19 +75,19 @@ class _StoryViewState extends State<StoryView> {
               if (index >= _provider!.controller.storyCount) {
                 return const SizedBox();
               }
-
+    
               final ValueNotifier<Widget> content =
                   ValueNotifier(_provider!.style());
-
+    
               () async {
                 final story = await _provider!.buildHelper.buildStory(index);
-
+    
                 content.value = ContentView(
                   storyIndex: index,
                   story: story,
                 );
               }();
-
+    
               return ValueListenableBuilder<Widget>(
                 valueListenable: content,
                 builder: (context, value, child) => value,
